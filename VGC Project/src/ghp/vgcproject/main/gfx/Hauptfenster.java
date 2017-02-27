@@ -18,7 +18,8 @@ public class Hauptfenster extends JFrame {
 
 	private JPanel contentPane;
 	private JTextField txtGengarVsKangaskhan;
-	private JToggleButton tglbtnToggleButtonTest;
+	private JToggleButton tglbtnWeiter;
+	public JLabel hintergrundLabel = new JLabel("");
 
 	/**
 	 * Launch the application.
@@ -45,30 +46,36 @@ public class Hauptfenster extends JFrame {
 		contentPane = new JPanel();
 		contentPane.setToolTipText("Gengar vs Kangaskhan");
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
-		contentPane.setLayout(new BorderLayout(0, 0));
 		setContentPane(contentPane);
+		contentPane.setLayout(null);
 		
-		JLabel lblNewLabel = new JLabel("");
-		lblNewLabel.setIcon(new ImageIcon(Hauptfenster.class.getResource("/Images/Pok\u00E9Background.jpg")));
-		contentPane.add(lblNewLabel, BorderLayout.CENTER);
-		
-		txtGengarVsKangaskhan = new JTextField();
-		txtGengarVsKangaskhan.setText("Gengar vs. Kangaskhan \r\n");
-		txtGengarVsKangaskhan.setToolTipText("");
-		contentPane.add(txtGengarVsKangaskhan, BorderLayout.SOUTH);
-		txtGengarVsKangaskhan.setColumns(10);
-		
-		tglbtnToggleButtonTest = new JToggleButton("ToggleButtonTest");
-		tglbtnToggleButtonTest.addActionListener(new ActionListener() {
+		tglbtnWeiter = new JToggleButton("Weiter");
+		tglbtnWeiter.setBounds(385, 338, 101, 36);
+		tglbtnWeiter.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 			
-				lblNewLabel.setIcon(new ImageIcon(Hauptfenster.class.getResource("pokemonGen5battlebackground.jpg")));
+				hintergrundLabel.setIcon(new javax.swing.ImageIcon(Hauptfenster.class.getResource("/Images/pokemonGen5battlebackground.jpg")));
 			
 			}
 		});
-		tglbtnToggleButtonTest.setIcon(new javax.swing.ImageIcon("PokéBackground.jpg"));
-		tglbtnToggleButtonTest.setSelectedIcon(new javax.swing.ImageIcon("selected_pokemonGen5battlebackground.jpg"));
-		contentPane.add(tglbtnToggleButtonTest, BorderLayout.NORTH);
-	}
+		
+		JToggleButton tglbtnNewToggleButton = new JToggleButton("Zurueck");
+		tglbtnNewToggleButton.setBounds(0, 338, 101, 36);
+		contentPane.add(tglbtnNewToggleButton);
+		tglbtnWeiter.setIcon(new javax.swing.ImageIcon("PokéBackground.jpg"));
+		tglbtnWeiter.setSelectedIcon(new javax.swing.ImageIcon("selected_pokemonGen5battlebackground.jpg"));
+		contentPane.add(tglbtnWeiter);
+		
 
+		hintergrundLabel.setBounds(0, 42, 486, 332);
+		hintergrundLabel.setIcon(new ImageIcon(Hauptfenster.class.getResource("/Images/Pok\u00E9Background.jpg")));
+		contentPane.add(hintergrundLabel);
+		
+		txtGengarVsKangaskhan = new JTextField();
+		txtGengarVsKangaskhan.setBounds(0, 0, 486, 42);
+		txtGengarVsKangaskhan.setText("Gengar vs. Kangaskhan \r\n");
+		txtGengarVsKangaskhan.setToolTipText("");
+		contentPane.add(txtGengarVsKangaskhan);
+		txtGengarVsKangaskhan.setColumns(10);
+	}
 }
