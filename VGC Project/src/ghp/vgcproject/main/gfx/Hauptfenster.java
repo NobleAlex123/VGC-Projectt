@@ -2,6 +2,7 @@ package ghp.vgcproject.main.gfx;
 
 import java.awt.BorderLayout;
 import java.awt.EventQueue;
+import java.awt.Image;
 
 import javax.swing.JFrame;
 import javax.swing.JPanel;
@@ -22,10 +23,12 @@ public class Hauptfenster extends JFrame {
 	private JToggleButton tglbtn2;
 	public JLabel hintergrundLabel = new JLabel("");
 	private JLabel lblGarchompVSRotom;
-	private JLabel lblGarchompSized;
 	private JButton btnNewButton;
-	private JTextArea textArea;
-	private JTextArea txtrDaWirUns;
+	private JTextArea txtVGCuPokémonEInleitung; 
+	private JTextArea txtWorausBestehtEinPokémon;
+	private JLabel lblVGCAngepasstBild;
+	
+	
 	/**
 	 * Launch the application.
 	 */
@@ -45,7 +48,7 @@ public class Hauptfenster extends JFrame {
 	/**
 	 * Create the frame.
 	 */
-	public Hauptfenster() {
+	public Hauptfenster() {//Created ein Fenster 
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(200, 200, 1027, 590);
 		contentPane = new JPanel();
@@ -60,11 +63,12 @@ public class Hauptfenster extends JFrame {
 			public void actionPerformed(ActionEvent arg0) {
 			
 				hintergrundLabel.setIcon(new javax.swing.ImageIcon(Hauptfenster.class.getResource("/Images/pokemonGen5battlebackground.jpg")));
-			
+				txtWorausBestehtEinPokémon.setText("Test");
+				txtWorausBestehtEinPokémon = new JTextArea("Test"); 
 			}
 		});
 		
-		JToggleButton tglbtnNewToggleButton = new JToggleButton("0");
+		JToggleButton tglbtnNewToggleButton = new JToggleButton("0");//Gibt dem Button folgende Funktion 
 		tglbtnNewToggleButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0)
 			{
@@ -92,21 +96,21 @@ public class Hauptfenster extends JFrame {
 		hintergrundLabel.setIcon(new ImageIcon(Hauptfenster.class.getResource("/Images/Pok\u00E9Background.jpg")));
 		contentPane.add(hintergrundLabel);
 		
-		lblGarchompVSRotom = new JLabel("Knackrack VS. Rotom ");
+		lblGarchompVSRotom = new JLabel("Mein VGC/Pok\u00E9mon-Guide");
 		lblGarchompVSRotom.setBounds(0, 0, 146, 45);
 		contentPane.add(lblGarchompVSRotom);
 		
-		lblGarchompSized = new JLabel("/Images/GarchompCorrectLabelSize.png");
-		lblGarchompSized.setIcon(new ImageIcon(Hauptfenster.class.getResource("/Images/GarchompCorrectLabelSize.png")));
-		lblGarchompSized.setBounds(223, 7, 46, 38);
-		contentPane.add(lblGarchompSized);
+		txtVGCuPokémonEInleitung = new JTextArea();
+		txtVGCuPokémonEInleitung.setText("Da wir uns in diesem Guide eher mit dem Wettkampf-Aspekt des Spieles besch\u00E4ftigen, lassen wir den Sammel-Aspekt des  Spieles aus. Also was genau macht einen Pok\u00E9mon-Kampf?\r\nDas 0815-Pokemon-KampfFormat, wird als Einzelkampf bezeichnet, in dem sich zwei Pok\u00E9mon gegen\u00FCberstehen. Hierbei ist nat\u00FCrlich zu beachten, dass es sich um 801 verschiedene Wesen handelt. Im Kampf ist es m\u00F6glich, aus 4 verschiedenen Pok\u00E9mon Attacken zu w\u00E4hlen. Desweiterein existiert das Doppelkampf-, Dreierkampf- und Rotationskampfformat. Da dies unser \"VGC-Project (Video Game Championship)\" ist, werden wir uns auf den Doppelkampf-Format fokussieren, da nur dieser bei den Championships gespielt wird.         \r\n");
+		txtVGCuPokémonEInleitung.setBounds(634, 33, 380, 291);
+		txtVGCuPokémonEInleitung.setLineWrap(true);
+		txtVGCuPokémonEInleitung.setWrapStyleWord(true);
+		contentPane.add(txtVGCuPokémonEInleitung);
 		
-		txtrDaWirUns = new JTextArea();
-		txtrDaWirUns.setText("Da wir uns in diesem Guide eher mit dem Wettkampf-Aspekt des Spieles besch\u00E4ftigen, lassen wir den Sammel-Aspekt des  Spieles aus. Also was genau macht einen Pok\u00E9mon-Kampf?\r\nDas 0815-Pokemon-KampfFormat, wird als Einzelkampf bezeichnet, in dem sich zwei Pok\u00E9mon gegen\u00FCberstehen. Hierbei ist nat\u00FCrlich zu beachten, dass es sich um 801 verschiedene Wesen handelt. Im Kampf ist es m\u00F6glich, aus 4 verschiedenen Pok\u00E9mon Attacken zu w\u00E4hlen. Desweiterein existiert das Doppelkampf-, Dreierkampf- und Rotationskampfformat. Da dies unser \"VGC-Project (Video Game Championship)\" ist, werden wir uns auf den Doppelkampf-Format fokussieren, da nur dieser bei den Championships gespielt wird.         \r\n");
-		txtrDaWirUns.setBounds(634, 33, 380, 484);
-		txtrDaWirUns.setLineWrap(true);
-		txtrDaWirUns.setWrapStyleWord(true);
-		contentPane.add(txtrDaWirUns);
+		lblVGCAngepasstBild = new JLabel("");
+		lblVGCAngepasstBild.setIcon(new ImageIcon(Hauptfenster.class.getResource("/Images/VGCAngepasst.jpg")));
+		lblVGCAngepasstBild.setBounds(638, 324, 376, 195);
+		contentPane.add(lblVGCAngepasstBild);
 		
 		
 		
