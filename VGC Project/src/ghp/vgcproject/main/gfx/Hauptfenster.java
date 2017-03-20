@@ -1,5 +1,6 @@
 package ghp.vgcproject.main.gfx;
 
+
 import java.awt.BorderLayout;
 import java.awt.EventQueue;
 import java.awt.Image;
@@ -14,6 +15,7 @@ import javax.swing.JTextField;
 import javax.swing.JButton;
 import javax.swing.JToggleButton;
 import java.awt.event.ActionListener;
+import java.util.HashMap;
 import java.awt.event.ActionEvent;
 import java.awt.TextArea;
 
@@ -24,8 +26,7 @@ public class Hauptfenster extends JFrame {
 	public JLabel hintergrundLabel = new JLabel("");
 	private JLabel lblGarchompVSRotom;
 	private JButton btnNewButton;
-	private JTextArea txtVGCuPokémonEInleitung; 
-	private JTextArea txtWorausBestehtEinPokémon;
+	private JTextArea txtVGCuPokémonEinleitung; 
 	private JLabel lblVGCAngepasstBild;
 	
 	
@@ -49,6 +50,7 @@ public class Hauptfenster extends JFrame {
 	 * Create the frame.
 	 */
 	public Hauptfenster() {//Created ein Fenster 
+		Daten daten = new Daten();
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(200, 200, 1027, 590);
 		contentPane = new JPanel();
@@ -63,8 +65,9 @@ public class Hauptfenster extends JFrame {
 			public void actionPerformed(ActionEvent arg0) {
 			
 				hintergrundLabel.setIcon(new javax.swing.ImageIcon(Hauptfenster.class.getResource("/Images/pokemonGen5battlebackground.jpg")));
-				txtWorausBestehtEinPokémon.setText("Test");
-				txtWorausBestehtEinPokémon = new JTextArea("Test"); 
+				txtVGCuPokémonEinleitung.setText(daten.TextWechselZuPassenderKategorie.get("Versuch"));
+				 
+				 
 			}
 		});
 		
@@ -73,6 +76,7 @@ public class Hauptfenster extends JFrame {
 			public void actionPerformed(ActionEvent arg0)
 			{
 				hintergrundLabel.setIcon(new javax.swing.ImageIcon(Hauptfenster.class.getResource("/Images/PokéBackground.jpg")));
+				txtVGCuPokémonEinleitung.setText(daten.TextWechselZuPassenderKategorie.get("zweiterVersuch"));
 			}
 		});
 		
@@ -100,12 +104,12 @@ public class Hauptfenster extends JFrame {
 		lblGarchompVSRotom.setBounds(0, 0, 146, 45);
 		contentPane.add(lblGarchompVSRotom);
 		
-		txtVGCuPokémonEInleitung = new JTextArea();
-		txtVGCuPokémonEInleitung.setText("Da wir uns in diesem Guide eher mit dem Wettkampf-Aspekt des Spieles besch\u00E4ftigen, lassen wir den Sammel-Aspekt des  Spieles aus. Also was genau macht einen Pok\u00E9mon-Kampf?\r\nDas 0815-Pokemon-KampfFormat, wird als Einzelkampf bezeichnet, in dem sich zwei Pok\u00E9mon gegen\u00FCberstehen. Hierbei ist nat\u00FCrlich zu beachten, dass es sich um 801 verschiedene Wesen handelt. Im Kampf ist es m\u00F6glich, aus 4 verschiedenen Pok\u00E9mon Attacken zu w\u00E4hlen. Desweiterein existiert das Doppelkampf-, Dreierkampf- und Rotationskampfformat. Da dies unser \"VGC-Project (Video Game Championship)\" ist, werden wir uns auf den Doppelkampf-Format fokussieren, da nur dieser bei den Championships gespielt wird.         \r\n");
-		txtVGCuPokémonEInleitung.setBounds(634, 33, 380, 291);
-		txtVGCuPokémonEInleitung.setLineWrap(true);
-		txtVGCuPokémonEInleitung.setWrapStyleWord(true);
-		contentPane.add(txtVGCuPokémonEInleitung);
+		txtVGCuPokémonEinleitung = new JTextArea();
+		txtVGCuPokémonEinleitung.setText("Da wir uns in diesem Guide eher mit dem Wettkampf-Aspekt des Spieles besch\u00E4ftigen, lassen wir den Sammel-Aspekt des  Spieles aus. Also was genau macht einen Pok\u00E9mon-Kampf?\r\nDas 0815-Pokemon-KampfFormat, wird als Einzelkampf bezeichnet, in dem sich zwei Pok\u00E9mon gegen\u00FCberstehen. Hierbei ist nat\u00FCrlich zu beachten, dass es sich um 801 verschiedene Wesen handelt. Im Kampf ist es m\u00F6glich, aus 4 verschiedenen Pok\u00E9mon Attacken zu w\u00E4hlen. Desweiterein existiert das Doppelkampf-, Dreierkampf- und Rotationskampfformat. Da dies unser \"VGC-Project (Video Game Championship)\" ist, werden wir uns auf den Doppelkampf-Format fokussieren, da nur dieser bei den Championships gespielt wird.         \r\n");
+		txtVGCuPokémonEinleitung.setBounds(634, 33, 380, 291);
+		txtVGCuPokémonEinleitung.setLineWrap(true);
+		txtVGCuPokémonEinleitung.setWrapStyleWord(true);
+		contentPane.add(txtVGCuPokémonEinleitung);
 		
 		lblVGCAngepasstBild = new JLabel("");
 		lblVGCAngepasstBild.setIcon(new ImageIcon(Hauptfenster.class.getResource("/Images/VGCAngepasst.jpg")));
