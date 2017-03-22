@@ -28,6 +28,8 @@ public class Hauptfenster extends JFrame {
 	private JButton btnNewButton;
 	private JTextArea txtVGCuPokémonEinleitung; 
 	private JLabel lblVGCAngepasstBild;
+	private JButton tglbtn3;
+	private JButton button;
 	
 	
 	/**
@@ -59,13 +61,22 @@ public class Hauptfenster extends JFrame {
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
 		
+		btnNewButton = new JButton("2");
+		btnNewButton.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+			
+				txtVGCuPokémonEinleitung.setText(daten.TextWechselZuPassenderKategorie.get("WorausBestehtEinPokémon2"));
+				
+			}
+		});
+		
 		tglbtn2 = new JToggleButton("1");
 		tglbtn2.setBounds(279, 516, 48, 36);
 		tglbtn2.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 			
 				hintergrundLabel.setIcon(new javax.swing.ImageIcon(Hauptfenster.class.getResource("/Images/pokemonGen5battlebackground.jpg")));
-				txtVGCuPokémonEinleitung.setText(daten.TextWechselZuPassenderKategorie.get("Versuch"));
+				txtVGCuPokémonEinleitung.setText(daten.TextWechselZuPassenderKategorie.get("WorausBestehtEinPokémon"));
 				 
 				 
 			}
@@ -80,20 +91,26 @@ public class Hauptfenster extends JFrame {
 			}
 		});
 		
-		btnNewButton = new JButton("2");
-		btnNewButton.addActionListener(new ActionListener() {
+		button = new JButton("3");
+		button.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 			
-				
+				hintergrundLabel.setIcon(new javax.swing.ImageIcon(Hauptfenster.class.getResource("/Images/PokéBackground.jpg")));
+				txtVGCuPokémonEinleitung.setText(daten.TextWechselZuPassenderKategorie.get("DamageCalc"));
 			}
 		});
-		btnNewButton.setBounds(335, 516, 48, 36);
-		contentPane.add(btnNewButton);
+		button.setBounds(393, 516, 48, 36);
+		contentPane.add(button);
+		
+
+		
 		tglbtnNewToggleButton.setBounds(228, 516, 48, 36);
 		contentPane.add(tglbtnNewToggleButton);
 		tglbtn2.setIcon(new javax.swing.ImageIcon("PokéBackground.jpg"));
 		tglbtn2.setSelectedIcon(new javax.swing.ImageIcon("selected_pokemonGen5battlebackground.jpg"));
 		contentPane.add(tglbtn2);
+		btnNewButton.setBounds(335, 516, 48, 36);
+		contentPane.add(btnNewButton);
 		
 
 		hintergrundLabel.setBounds(0, 33, 628, 497);
