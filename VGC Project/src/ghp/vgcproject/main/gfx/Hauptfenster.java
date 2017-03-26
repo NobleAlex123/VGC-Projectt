@@ -30,6 +30,7 @@ public class Hauptfenster extends JFrame {
 	private JLabel lblVGCAngepasstBild;
 	private JButton tglbtn3;
 	private JButton button;
+	private JButton button_2;
 	
 	
 	/**
@@ -61,7 +62,7 @@ public class Hauptfenster extends JFrame {
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
 		
-		btnNewButton = new JButton("2");
+		btnNewButton = new JButton("3");
 		btnNewButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 			
@@ -75,7 +76,7 @@ public class Hauptfenster extends JFrame {
 		tglbtn2.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 			
-				hintergrundLabel.setIcon(new javax.swing.ImageIcon(Hauptfenster.class.getResource("/Images/pokemonGen5battlebackground.jpg")));
+				hintergrundLabel.setIcon(new javax.swing.ImageIcon(Hauptfenster.class.getResource("/Images/TypChart.jpg")));
 				txtVGCuPokémonEinleitung.setText(daten.TextWechselZuPassenderKategorie.get("WorausBestehtEinPokémon"));
 				 
 				 
@@ -91,15 +92,37 @@ public class Hauptfenster extends JFrame {
 			}
 		});
 		
-		button = new JButton("3");
+		button = new JButton("4");
 		button.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 			
-				hintergrundLabel.setIcon(new javax.swing.ImageIcon(Hauptfenster.class.getResource("/Images/PokéBackground.jpg")));
+				hintergrundLabel.setIcon(new javax.swing.ImageIcon(Hauptfenster.class.getResource("/Images/ArbokPerfektUndDMGFormel.jpg")));
 				txtVGCuPokémonEinleitung.setText(daten.TextWechselZuPassenderKategorie.get("DamageCalc"));
 			}
 		});
-		button.setBounds(393, 516, 48, 36);
+		
+		JButton button_1 = new JButton("2");
+		button_1.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+			
+				txtVGCuPokémonEinleitung.setText(daten.TextWechselZuPassenderKategorie.get("RotomBsp"));
+				hintergrundLabel.setIcon(new javax.swing.ImageIcon(Hauptfenster.class.getResource("/Images/RotomUMaxax.jpg")));
+			}
+		});
+		
+		button_2 = new JButton("5");
+		button_2.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+			
+				hintergrundLabel.setIcon(new javax.swing.ImageIcon(Hauptfenster.class.getResource("/Images/TukanonPerfektUDMGFormel.jpg")));
+				
+			}
+		});
+		button_2.setBounds(522, 516, 48, 36);
+		contentPane.add(button_2);
+		button_1.setBounds(337, 516, 48, 36);
+		contentPane.add(button_1);
+		button.setBounds(456, 516, 48, 36);
 		contentPane.add(button);
 		
 
@@ -109,7 +132,7 @@ public class Hauptfenster extends JFrame {
 		tglbtn2.setIcon(new javax.swing.ImageIcon("PokéBackground.jpg"));
 		tglbtn2.setSelectedIcon(new javax.swing.ImageIcon("selected_pokemonGen5battlebackground.jpg"));
 		contentPane.add(tglbtn2);
-		btnNewButton.setBounds(335, 516, 48, 36);
+		btnNewButton.setBounds(398, 516, 48, 36);
 		contentPane.add(btnNewButton);
 		
 
@@ -128,7 +151,7 @@ public class Hauptfenster extends JFrame {
 		txtVGCuPokémonEinleitung.setWrapStyleWord(true);
 		contentPane.add(txtVGCuPokémonEinleitung);
 		
-		lblVGCAngepasstBild = new JLabel("");
+		lblVGCAngepasstBild = new JLabel("VGC-Poster");
 		lblVGCAngepasstBild.setIcon(new ImageIcon(Hauptfenster.class.getResource("/Images/VGCAngepasst.jpg")));
 		lblVGCAngepasstBild.setBounds(638, 324, 376, 195);
 		contentPane.add(lblVGCAngepasstBild);
