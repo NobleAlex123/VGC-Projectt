@@ -115,9 +115,20 @@ public class Hauptfenster extends JFrame {
 			public void actionPerformed(ActionEvent e) {
 			
 				hintergrundLabel.setIcon(new javax.swing.ImageIcon(Hauptfenster.class.getResource("/Images/TukanonPerfektUDMGFormel.jpg")));
-				
+				txtVGCuPokémonEinleitung.setText(daten.TextWechselZuPassenderKategorie.get("DamageCalc2"));
 			}
 		});
+		
+		JButton button_3 = new JButton("6");
+		button_3.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				
+				
+				hintergrundLabel.setIcon(new javax.swing.ImageIcon(Hauptfenster.class.getResource("/Images/DMGFormel.jpg")));
+			}
+		});
+		button_3.setBounds(580, 516, 48, 36);
+		contentPane.add(button_3);
 		button_2.setBounds(522, 516, 48, 36);
 		contentPane.add(button_2);
 		button_1.setBounds(337, 516, 48, 36);
@@ -145,7 +156,7 @@ public class Hauptfenster extends JFrame {
 		contentPane.add(lblGarchompVSRotom);
 		
 		txtVGCuPokémonEinleitung = new JTextArea();
-		txtVGCuPokémonEinleitung.setText("Da wir uns in diesem Guide eher mit dem Wettkampf-Aspekt des Spieles besch\u00E4ftigen, lassen wir den Sammel-Aspekt des  Spieles aus. Also was genau macht einen Pok\u00E9mon-Kampf?\r\nDas 0815-Pokemon-KampfFormat, wird als Einzelkampf bezeichnet, in dem sich zwei Pok\u00E9mon gegen\u00FCberstehen. Hierbei ist nat\u00FCrlich zu beachten, dass es sich um 801 verschiedene Wesen handelt. Im Kampf ist es m\u00F6glich, aus 4 verschiedenen Pok\u00E9mon Attacken zu w\u00E4hlen. Desweiterein existiert das Doppelkampf-, Dreierkampf- und Rotationskampfformat. Da dies unser \"VGC-Project (Video Game Championship)\" ist, werden wir uns auf den Doppelkampf-Format fokussieren, da nur dieser bei den Championships gespielt wird.         \r\n");
+		txtVGCuPokémonEinleitung.setText("Da wir uns in diesem Guide eher mit dem Wettkampf-Aspekt des Spieles besch\u00E4ftigen, lassen wir den Sammel-Aspekt des  Spieles aus. Also was genau macht einen Pok\u00E9mon-Kampf?\r\nDas 0815-Pokemon-KampfFormat, wird als Einzelkampf bezeichnet, in dem sich zwei Pok\u00E9mon gegen\u00FCberstehen. Hierbei ist nat\u00FCrlich zu beachten, dass es sich um 801 verschiedene Wesen handelt. Im Kampf ist es m\u00F6glich, aus 4 verschiedenen Pok\u00E9mon Attacken zu w\u00E4hlen. Desweiterein existiert das Doppelkampf-, Dreierkampf- und Rotationskampfformat. Da dies unser \"VGC-Project (Video Game Championship)\" ist, werden wir uns auf den Doppelkampf-Format fokussieren, da nur dieser bei den Championships gespielt wird.(Das wollten WIR, diese Guide wurder jedoch zu einem Pokémon-Basics-Guide umgeformt :'D, also könnt ihr den VGC-Banner getrost ignorieren ;D.       \r\n");
 		txtVGCuPokémonEinleitung.setBounds(634, 33, 380, 291);
 		txtVGCuPokémonEinleitung.setLineWrap(true);
 		txtVGCuPokémonEinleitung.setWrapStyleWord(true);
