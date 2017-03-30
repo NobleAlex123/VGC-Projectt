@@ -30,7 +30,6 @@ public class Hauptfenster extends JFrame {
 	private JLabel lblVGCAngepasstBild;
 	private JButton tglbtn3;
 	private JButton button;
-	private JButton button_2;
 	
 	
 	/**
@@ -55,14 +54,14 @@ public class Hauptfenster extends JFrame {
 	public Hauptfenster() {//Created ein Fenster 
 		Daten daten = new Daten();
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(200, 200, 1027, 590);
+		setBounds(200, 200, 1174, 588);
 		contentPane = new JPanel();
 		contentPane.setToolTipText("Garchomp vs Rotom ");
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
 		
-		btnNewButton = new JButton("3");
+		btnNewButton = new JButton("4");
 		btnNewButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 			
@@ -72,7 +71,7 @@ public class Hauptfenster extends JFrame {
 		});
 		
 		tglbtn2 = new JToggleButton("1");
-		tglbtn2.setBounds(279, 516, 48, 36);
+		tglbtn2.setBounds(68, 516, 48, 36);
 		tglbtn2.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 			
@@ -92,30 +91,21 @@ public class Hauptfenster extends JFrame {
 			}
 		});
 		
-		button = new JButton("4");
+		button = new JButton("5");
 		button.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 			
-				hintergrundLabel.setIcon(new javax.swing.ImageIcon(Hauptfenster.class.getResource("/Images/ArbokPerfektUndDMGFormel.jpg")));
+				hintergrundLabel.setIcon(new javax.swing.ImageIcon(Hauptfenster.class.getResource("/Images/ArbokUTukanon.jpg")));
 				txtVGCuPokémonEinleitung.setText(daten.TextWechselZuPassenderKategorie.get("DamageCalc"));
 			}
 		});
 		
-		JButton button_1 = new JButton("2");
+		JButton button_1 = new JButton("3");
 		button_1.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 			
 				txtVGCuPokémonEinleitung.setText(daten.TextWechselZuPassenderKategorie.get("RotomBsp"));
-				hintergrundLabel.setIcon(new javax.swing.ImageIcon(Hauptfenster.class.getResource("/Images/RotomUMaxax.jpg")));
-			}
-		});
-		
-		button_2 = new JButton("5");
-		button_2.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-			
-				hintergrundLabel.setIcon(new javax.swing.ImageIcon(Hauptfenster.class.getResource("/Images/TukanonPerfektUDMGFormel.jpg")));
-				txtVGCuPokémonEinleitung.setText(daten.TextWechselZuPassenderKategorie.get("DamageCalc2"));
+				hintergrundLabel.setIcon(new javax.swing.ImageIcon(Hauptfenster.class.getResource("/Images/RotomUMaxax5.jpg")));
 			}
 		});
 		
@@ -125,25 +115,35 @@ public class Hauptfenster extends JFrame {
 				
 				
 				hintergrundLabel.setIcon(new javax.swing.ImageIcon(Hauptfenster.class.getResource("/Images/DMGFormel.jpg")));
+				txtVGCuPokémonEinleitung.setText(daten.TextWechselZuPassenderKategorie.get("DamageCalc2"));
 			}
 		});
-		button_3.setBounds(580, 516, 48, 36);
+		
+		JToggleButton toggleButton = new JToggleButton("2");
+		toggleButton.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+			
+				hintergrundLabel.setIcon(new javax.swing.ImageIcon(Hauptfenster.class.getResource("/Images/wesentabelle.jpg")));
+				txtVGCuPokémonEinleitung.setText(daten.TextWechselZuPassenderKategorie.get("WesenBeschreibung"));
+			}
+		});
+		toggleButton.setBounds(126, 516, 48, 36);
+		contentPane.add(toggleButton);
+		button_3.setBounds(358, 516, 48, 36);
 		contentPane.add(button_3);
-		button_2.setBounds(522, 516, 48, 36);
-		contentPane.add(button_2);
-		button_1.setBounds(337, 516, 48, 36);
+		button_1.setBounds(184, 516, 48, 36);
 		contentPane.add(button_1);
-		button.setBounds(456, 516, 48, 36);
+		button.setBounds(300, 516, 48, 36);
 		contentPane.add(button);
 		
 
 		
-		tglbtnNewToggleButton.setBounds(228, 516, 48, 36);
+		tglbtnNewToggleButton.setBounds(10, 516, 48, 36);
 		contentPane.add(tglbtnNewToggleButton);
 		tglbtn2.setIcon(new javax.swing.ImageIcon("PokéBackground.jpg"));
 		tglbtn2.setSelectedIcon(new javax.swing.ImageIcon("selected_pokemonGen5battlebackground.jpg"));
 		contentPane.add(tglbtn2);
-		btnNewButton.setBounds(398, 516, 48, 36);
+		btnNewButton.setBounds(242, 516, 48, 36);
 		contentPane.add(btnNewButton);
 		
 
@@ -156,7 +156,7 @@ public class Hauptfenster extends JFrame {
 		contentPane.add(lblGarchompVSRotom);
 		
 		txtVGCuPokémonEinleitung = new JTextArea();
-		txtVGCuPokémonEinleitung.setText("Da wir uns in diesem Guide eher mit dem Wettkampf-Aspekt des Spieles besch\u00E4ftigen, lassen wir den Sammel-Aspekt des  Spieles aus. Also was genau macht einen Pok\u00E9mon-Kampf?\r\nDas 0815-Pokemon-KampfFormat, wird als Einzelkampf bezeichnet, in dem sich zwei Pok\u00E9mon gegen\u00FCberstehen. Hierbei ist nat\u00FCrlich zu beachten, dass es sich um 801 verschiedene Wesen handelt. Im Kampf ist es m\u00F6glich, aus 4 verschiedenen Pok\u00E9mon Attacken zu w\u00E4hlen. Desweiterein existiert das Doppelkampf-, Dreierkampf- und Rotationskampfformat. Da dies unser \"VGC-Project (Video Game Championship)\" ist, werden wir uns auf den Doppelkampf-Format fokussieren, da nur dieser bei den Championships gespielt wird.(Das wollten WIR, diese Guide wurder jedoch zu einem Pokémon-Basics-Guide umgeformt :'D, also könnt ihr den VGC-Banner getrost ignorieren ;D.       \r\n");
+		txtVGCuPokémonEinleitung.setText("Da wir uns in diesem Guide eher mit dem Wettkampf-Aspekt des Spieles besch\u00E4ftigen, lassen wir den Sammel-Aspekt des  Spieles aus. Also was genau macht einen Pok\u00E9mon-Kampf?\r\nDas 0815-Pokemon-KampfFormat, wird als Einzelkampf bezeichnet, in dem sich zwei Pok\u00E9mon gegen\u00FCberstehen. Hierbei ist nat\u00FCrlich zu beachten, dass es sich um 801 verschiedene Wesen handelt. Im Kampf ist es m\u00F6glich, aus 4 verschiedenen Pok\u00E9mon Attacken zu w\u00E4hlen. Desweiteren existiert das Doppelkampf-, Dreierkampf- und Rotationskampfformat. Da dies unser \"VGC-Project (Video Game Championship)\" ist, werden wir uns auf den Doppelkampf-Format fokussieren, da nur dieser bei den Championships gespielt wird.(Das wollten WIR, dieser Guide wurde jedoch zu einem Pokémon-Basics-Guide umgeformt :'D, also könnt ihr den VGC-Banner getrost ignorieren ;D.       \r\n");
 		txtVGCuPokémonEinleitung.setBounds(634, 33, 380, 291);
 		txtVGCuPokémonEinleitung.setLineWrap(true);
 		txtVGCuPokémonEinleitung.setWrapStyleWord(true);
@@ -164,7 +164,7 @@ public class Hauptfenster extends JFrame {
 		
 		lblVGCAngepasstBild = new JLabel("VGC-Poster");
 		lblVGCAngepasstBild.setIcon(new ImageIcon(Hauptfenster.class.getResource("/Images/VGCAngepasst.jpg")));
-		lblVGCAngepasstBild.setBounds(638, 324, 376, 195);
+		lblVGCAngepasstBild.setBounds(638, 335, 510, 192);
 		contentPane.add(lblVGCAngepasstBild);
 		
 		
