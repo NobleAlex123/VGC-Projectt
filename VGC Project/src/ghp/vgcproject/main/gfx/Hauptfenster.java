@@ -70,6 +70,43 @@ public class Hauptfenster extends JFrame {
 			}
 		});
 		
+		button = new JButton("5");
+		button.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+			
+				hintergrundLabel.setIcon(new javax.swing.ImageIcon(Hauptfenster.class.getResource("/Images/ArbokUTukanon.jpg")));
+				txtVGCuPokémonEinleitung.setText(daten.TextWechselZuPassenderKategorie.get("DamageCalc"));
+			}
+		});
+		
+		JButton button_3 = new JButton("6");
+		button_3.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				
+				
+				hintergrundLabel.setIcon(new javax.swing.ImageIcon(Hauptfenster.class.getResource("/Images/DMGFormel.jpg")));
+				txtVGCuPokémonEinleitung.setText(daten.TextWechselZuPassenderKategorie.get("DamageCalc2"));
+			}
+		});
+		
+		JButton button_1 = new JButton("3");
+		button_1.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+			
+				txtVGCuPokémonEinleitung.setText(daten.TextWechselZuPassenderKategorie.get("RotomBsp"));
+				hintergrundLabel.setIcon(new javax.swing.ImageIcon(Hauptfenster.class.getResource("/Images/RotomUMaxax5.jpg")));
+			}
+		});
+		
+		JToggleButton toggleButton = new JToggleButton("2");
+		toggleButton.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+			
+				hintergrundLabel.setIcon(new javax.swing.ImageIcon(Hauptfenster.class.getResource("/Images/wesentabelle.jpg")));
+				txtVGCuPokémonEinleitung.setText(daten.TextWechselZuPassenderKategorie.get("WesenBeschreibung"));
+			}
+		});
+		
 		tglbtn2 = new JToggleButton("1");
 		tglbtn2.setBounds(68, 516, 48, 36);
 		tglbtn2.addActionListener(new ActionListener() {
@@ -91,51 +128,6 @@ public class Hauptfenster extends JFrame {
 			}
 		});
 		
-		button = new JButton("5");
-		button.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent arg0) {
-			
-				hintergrundLabel.setIcon(new javax.swing.ImageIcon(Hauptfenster.class.getResource("/Images/ArbokUTukanon.jpg")));
-				txtVGCuPokémonEinleitung.setText(daten.TextWechselZuPassenderKategorie.get("DamageCalc"));
-			}
-		});
-		
-		JButton button_1 = new JButton("3");
-		button_1.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-			
-				txtVGCuPokémonEinleitung.setText(daten.TextWechselZuPassenderKategorie.get("RotomBsp"));
-				hintergrundLabel.setIcon(new javax.swing.ImageIcon(Hauptfenster.class.getResource("/Images/RotomUMaxax5.jpg")));
-			}
-		});
-		
-		JButton button_3 = new JButton("6");
-		button_3.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-				
-				
-				hintergrundLabel.setIcon(new javax.swing.ImageIcon(Hauptfenster.class.getResource("/Images/DMGFormel.jpg")));
-				txtVGCuPokémonEinleitung.setText(daten.TextWechselZuPassenderKategorie.get("DamageCalc2"));
-			}
-		});
-		
-		JToggleButton toggleButton = new JToggleButton("2");
-		toggleButton.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent arg0) {
-			
-				hintergrundLabel.setIcon(new javax.swing.ImageIcon(Hauptfenster.class.getResource("/Images/wesentabelle.jpg")));
-				txtVGCuPokémonEinleitung.setText(daten.TextWechselZuPassenderKategorie.get("WesenBeschreibung"));
-			}
-		});
-		toggleButton.setBounds(126, 516, 48, 36);
-		contentPane.add(toggleButton);
-		button_3.setBounds(358, 516, 48, 36);
-		contentPane.add(button_3);
-		button_1.setBounds(184, 516, 48, 36);
-		contentPane.add(button_1);
-		button.setBounds(300, 516, 48, 36);
-		contentPane.add(button);
-		
 
 		
 		tglbtnNewToggleButton.setBounds(10, 516, 48, 36);
@@ -143,6 +135,25 @@ public class Hauptfenster extends JFrame {
 		tglbtn2.setIcon(new javax.swing.ImageIcon("PokéBackground.jpg"));
 		tglbtn2.setSelectedIcon(new javax.swing.ImageIcon("selected_pokemonGen5battlebackground.jpg"));
 		contentPane.add(tglbtn2);
+		toggleButton.setBounds(126, 516, 48, 36);
+		contentPane.add(toggleButton);
+		button_1.setBounds(184, 516, 48, 36);
+		contentPane.add(button_1);
+		
+		JButton button_2 = new JButton("7");
+		button_2.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+			
+				Fragebogen nw = new Fragebogen(); // Created den Fragebogen hier als newScreen angegeben, durch pressen v. 7
+				nw.newScreen();
+			}
+		});
+		button_2.setBounds(416, 516, 48, 36);
+		contentPane.add(button_2);
+		button_3.setBounds(358, 516, 48, 36);
+		contentPane.add(button_3);
+		button.setBounds(300, 516, 48, 36);
+		contentPane.add(button);
 		btnNewButton.setBounds(242, 516, 48, 36);
 		contentPane.add(btnNewButton);
 		
